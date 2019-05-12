@@ -1,6 +1,7 @@
 .App {
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
+  color: #fc2f70;
   height: 100vh;
   background: #192231;
 }
@@ -26,4 +27,9 @@ svg {
   to {
     transform: rotate(360deg);
   }
+}
+
+.title{
+  padding: 1rem;
+  font-size: 2rem;
 }
