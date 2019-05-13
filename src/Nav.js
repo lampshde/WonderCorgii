@@ -1,5 +1,6 @@
 import React from 'react';
 import './Nav.css';
+import {Link} from 'react-scroll'
 
 class Nav extends React.Component{
     constructor(props) {
@@ -16,10 +17,17 @@ class Nav extends React.Component{
             <nav className={"animated fadeInRight " + (this.state.selectedIndex >= 0 ? 'minimized' : '')}>
                 <div className="nav-links-wrapper" style={this.state.selectedIndex >= 0 ? {transform: `translateY(${-39*this.state.selectedIndex}px)`} : {}}>
                     {this.props.navItems.map((value,index) => {
-                        return <div className={"nav-item " + (this.state.selectedIndex === index ? 'selected' : '')} onClick={()=>(this.selectNavItem(index))}>
-                            <div className="nav-item-text">{value}</div>
-                            <div className="nav-item-index">0{index}</div>
-                        </div>
+                        return <Link 
+                            to={ index != this.state.selectedIndex ? `section${index}` : ''}
+                            duration= {500}
+                            smooth={true}
+                            offset= {-200}
+                            >
+                            <div className={"nav-item " + (this.state.selectedIndex === index ? 'selected' : '')} onClick={()=>(this.selectNavItem(index))}>
+                                <div className="nav-item-text">{value}</div>
+                                <div className="nav-item-index">0{index}</div>
+                            </div>
+                        </Link>
                     })}
                 </div>
             </nav>
