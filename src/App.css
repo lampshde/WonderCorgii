@@ -1,9 +1,9 @@
 .App {
   /* display: flex;
   justify-content: center; */
-  color: #fc2f70;
+  color: #1D1D2C;
   height: 100vh;
-  background: #192231;
+  background: #F7F4E9;
 }
 
 svg {
@@ -32,4 +32,7 @@ svg {
 .title{
   padding: 1rem;
   font-size: 2rem;
+}
+.sub-title{
+  padding: 0 1rem;
 }
