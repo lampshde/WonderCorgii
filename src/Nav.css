@@ -1,11 +1,8 @@
 nav{
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    width: 150px;
-    color: #000;
+    width: 100%;
+    color: var(--theme-text-color);
     animation-delay: .5s;
-    z-index: 9999;
+    margin-top: 1rem;
 }
 
 .nav-item{
@@ -13,7 +10,7 @@ nav{
     grid-template-columns: 1fr 20px;
     grid-template-rows: 1fr;
     grid-template-areas: ". .";
-    padding: .5rem 0;
+    padding-bottom: 1rem;
 }
 
 .nav-item-text{
@@ -31,7 +28,7 @@ nav{
     left: 0;
     right: 0;
     height: 3px;
-    background-color: #E40C2B;
+    background-color: var(--theme-primary-color);
     transform-origin: center right;
     transform: scaleX(0) translateY(-50%);
     transition: transform 0.3s ease;
@@ -51,7 +48,7 @@ nav{
 }
 
 nav.minimized{
-    height: 40px;
+    height: 39px;
     overflow: hidden;
 
 }

@@ -1,38 +1,48 @@
 .App {
   /* display: flex;
   justify-content: center; */
-  color: #1D1D2C;
-  height: 100vh;
-  background: #F7F4E9;
+  color: var(--theme-text-color);
+  min-height: 100vh;
+  background: var(--theme-bg-color);
+  padding-bottom: 15rem;
 }
 
-svg {
-  width: 20%;
-  animation: 1.5s spin ease infinite;
-  align-self: center;
-}
-
-.ring {
-  fill: none;
-  stroke: hsla(341, 97%, 59%, 0.3);
-  stroke-width: 2;
-}
-
-.ball {
-  fill: #fc2f70;
-  stroke: none;
-}
-
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+header{
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 9999;
+  display: grid;
+  grid-template-columns: 1fr 100px;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". .";
 }
 
 .title{
   padding: 1rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 .sub-title{
   padding: 0 1rem;
 }
+
+section{
+  padding: 15rem 1rem 0 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card{
+  background: #14151d;
+  padding: 1rem;
+  border-top: 3px solid;
+  border-color: var(--theme-primary-color);
+  margin-bottom: 10rem;
+}
+
+.card h2{
+  font-size: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+

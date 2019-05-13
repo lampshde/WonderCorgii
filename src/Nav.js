@@ -14,7 +14,7 @@ class Nav extends React.Component{
     render(){
         return (
             <nav className={"animated fadeInRight " + (this.state.selectedIndex >= 0 ? 'minimized' : '')}>
-                <div className="nav-links-wrapper" style={this.state.selectedIndex >= 0 ? {transform: `translateY(${-40*this.state.selectedIndex}px)`} : {}}>
+                <div className="nav-links-wrapper" style={this.state.selectedIndex >= 0 ? {transform: `translateY(${-39*this.state.selectedIndex}px)`} : {}}>
                     {this.props.navItems.map((value,index) => {
                         return <div className={"nav-item " + (this.state.selectedIndex === index ? 'selected' : '')} onClick={()=>(this.selectNavItem(index))}>
                             <div className="nav-item-text">{value}</div>
