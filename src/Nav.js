@@ -23,7 +23,7 @@ class Nav extends React.Component{
                             smooth={true}
                             offset= {-200}
                             >
-                            <div className={"nav-item " + (this.state.selectedIndex === index ? 'selected' : '')} onClick={()=>(this.selectNavItem(index))}>
+                            <div className={"nav-item " + (this.state.selectedIndex === index ? 'selected' : '')} onClick={()=>(this.selectNavItem(index,false))}>
                                 <div className="nav-item-text">{value}</div>
                                 <div className="nav-item-index">0{index}</div>
                             </div>
@@ -34,8 +34,11 @@ class Nav extends React.Component{
         );
     }
 
-    selectNavItem(index){
-        if(index === this.state.selectedIndex){
+    selectNavItem(index, ignoreSame){
+        if(index === this.state.selectedIndex && ignoreSame === true){
+            return
+        }
+        else if(index === this.state.selectedIndex){
             this.setState({selectedIndex: -1})
         }
         else{

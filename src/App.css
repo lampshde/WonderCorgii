@@ -46,3 +46,30 @@ section{
   font-family: 'Montserrat', sans-serif;
 }
 
+.skills .code-line{
+  padding-left: 2rem;
+  white-space: nowrap;
+}
+
+.skills .code-line .code-line-var{
+  padding-right: 1rem;
+  color: var(--theme-primary-color)
+}
+
+.skills .code-line .code-line-var::after{
+  content: " :";
+  color: var(--theme-secondary-color);
+  font-weight: bold;
+}
+
+.skills .code-line .code-line-value:not(:last-child)::after{
+  content: ','
+}
+
+.section{
+  margin-top: 30rem;
+}
+
+.section h2{
+  color: var(--theme-primary-color);
+}
