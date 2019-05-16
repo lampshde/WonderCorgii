@@ -22,49 +22,29 @@ class App extends React.Component {
     return (
       <div className="App">
         <header>
-          <div>
+          {/* <div>
             <div className="title animated fadeInDown" >JOHNRANDALL</div>
             <div className="sub-title animated fadeInDown">Fullstack Web Developer</div>
+          </div> */}
+          <div className="title">
+            <div className="title-line">Hi,</div>
+            <div className="title-line">I'm John,</div>
+            <div className="title-line">web developer. <img src="/assets/corgi.gif"/></div>
+            <div className="sub-title-line">Full Stack Developer / Javascript / Corgi Lover</div>
           </div>
           <Nav ref={this.child} navItems={navItems}></Nav>
         </header>
         <section>
           <ScrollTrigger onEnter={()=>(this.child.current.selectNavItem(0,true))}>
           <div id="section0" className="section" data-aos='fade'>
-            <h2>.INTRO()</h2>
-            <p>Vivamus ac elementum ex. Nullam nec venenatis diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus tempus, risus consequat finibus feugiat, ante dui sodales magna, et mollis diam ante sit amet ipsum. Suspendisse venenatis hendrerit nibh vitae posuere. </p>
+            <div className="section-header">
+              <div className="section-header-title">About me</div>
+              <div className="section-header-line"></div>
+              <div className="section-header-num">N°01</div>
+            </div>
+            <p>At my <span>:root</span>, I am a creative frontend developer, designer, and ultimately a lifelong learner.</p>
+            <p>My passion is constructing engaging and well designed websites through <span>carefully crafted code.</span></p>
           </div>
-          </ScrollTrigger>
-          <ScrollTrigger onEnter={()=>(this.child.current.selectNavItem(1,true))}>
-            <div id="section1" className="section skills" data-aos='fade-right'>
-              <h2>.SKILLS()</h2>
-              <p>{"{"}</p>
-                <div className="code-line">
-                  <span className="code-line-var">Docker</span>
-                  <span className="code-line-value">"Containerize everything"</span>
-                </div>
-                <div className="code-line">
-                  <span className="code-line-var">Angular</span>
-                  <span className="code-line-value">"On the daily"</span>
-                </div>
-                <div className="code-line">
-                  <span className="code-line-var">Hello</span>
-                  <span className="code-line-value">"World!"</span>
-                </div>
-              <p>{"}"}</p>
-            </div>
-          </ScrollTrigger>
-          <ScrollTrigger onEnter={()=>(this.child.current.selectNavItem(2,true))}>   
-            <div id="section2" className="section" data-aos='fade-right'>
-              <h2>.BLOG()</h2>
-              <p>Vivamus ac elementum ex. Nullam nec venenatis diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus tempus, risus consequat finibus feugiat, ante dui sodales magna, et mollis diam ante sit amet ipsum. Suspendisse venenatis hendrerit nibh vitae posuere. </p>
-            </div>
-          </ScrollTrigger>
-          <ScrollTrigger onEnter={()=>(this.child.current.selectNavItem(3, true))}>     
-            <div id="section3" className="section" data-aos='fade-right'>
-              <h2>.CONTACT()</h2>
-              <p>Vivamus ac elementum ex. Nullam nec venenatis diam. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus tempus, risus consequat finibus feugiat, ante dui sodales magna, et mollis diam ante sit amet ipsum. Suspendisse venenatis hendrerit nibh vitae posuere. </p>
-            </div>
           </ScrollTrigger>
         </section>   
       </div>

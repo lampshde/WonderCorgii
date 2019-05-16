@@ -20,9 +20,26 @@ header{
 }
 
 .title{
-  padding: 1rem;
-  font-size: 1.5rem;
+  padding: 2rem 1rem;
 }
+
+.title .title-line{
+  font-size: 24px;
+  color: #CFD0D6;
+  position: relative;
+}
+
+.title .title-line img {
+  position: absolute;
+  bottom: 0;
+  margin-left: .5rem;
+}
+.title .sub-title-line{
+  font-family: 'Roboto Mono', monospace;
+  font-size: 12px;
+  color: #9DA0B2
+}
+
 .sub-title{
   padding: 0 1rem;
 }
@@ -31,6 +48,37 @@ section{
   padding: 15rem 1rem 0 1rem;
   max-width: 1000px;
   margin: 0 auto;
+}
+
+.section{
+  margin-top: 30rem;
+}
+
+
+
+.section .section-header{
+  display: grid;
+  grid-template-columns: max-content 1fr 20px;
+  grid-template-rows: 1fr;
+  grid-template-areas: ". . .";
+  font-family: 'Montserrat SemiBold', sans-serif;
+  color: #CFD0D6;
+}
+.section .section-header .section-header-title{
+  font-size: 24px;
+}
+.section .section-header .section-header-line{
+  width: 90%; 
+  border-bottom: 1px solid; 
+  line-height: 0.1em;
+  margin: 10px 0 20px 5% ; 
+}
+.section .section-header .section-header-num{
+  word-wrap: break-word;
+}
+
+.section p span{
+  color: var(--theme-primary-color)
 }
 
 .card{
@@ -62,14 +110,15 @@ section{
   font-weight: bold;
 }
 
-.skills .code-line .code-line-value:not(:last-child)::after{
-  content: ','
+.skills .code-line .code-line-value:after{
+  content: ',';
+  color: #fff;
+}
+.skills .code-line:last-of-type .code-line-value:after{ 
+  content: ''
 }
 
-.section{
-  margin-top: 30rem;
+.skills .code-line .code-line-value.string{
+  color: #62b8b8;
 }
 
-.section h2{
-  color: var(--theme-primary-color);
-}
