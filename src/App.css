@@ -32,8 +32,7 @@ header{
 }
 
 .title .title-line img {
-  position: absolute;
-  bottom: 0;
+  display: inline-block;
   margin-left: .5rem;
 }
 .title .sub-title-line{
