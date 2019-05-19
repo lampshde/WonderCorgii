@@ -25,7 +25,7 @@ class Nav extends React.Component{
                             >
                             <div className={"nav-item " + (this.state.selectedIndex === index ? 'selected' : '')} onClick={()=>(this.selectNavItem(index,false))}>
                                 <div className="nav-item-text">{value}</div>
-                                <div className="nav-item-index">0{index}</div>
+                                <div className="nav-item-index">0{index+1}</div>
                             </div>
                         </Link>
                     })}

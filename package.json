@@ -8,7 +8,9 @@
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1",
     "react-scroll": "^1.7.11",
-    "react-scroll-trigger": "^0.5.3"
+    "react-scroll-trigger": "^0.5.3",
+    "three": "^0.104.0",
+    "three.meshline": "^1.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
