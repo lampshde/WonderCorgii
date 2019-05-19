@@ -37,10 +37,13 @@ class Background extends React.Component {
 
         this.camera.position.z = 2
         //ADD RENDERER
+        this.devicePixelRatio = window.devicePixelRatio ? Math.min(1.6, window.devicePixelRatio) : 1;
+        console.log(this.devicePixelRatio)
         this.renderer = new THREE.WebGLRenderer({
             antialias: true,
             alpha: true
         })
+        this.renderer.setPixelRatio(this.devicePixelRatio);
         this.renderer.setSize(this.state.width, this.state.height)
         this.updateSize()
         this.mount.appendChild(this.renderer.domElement)
