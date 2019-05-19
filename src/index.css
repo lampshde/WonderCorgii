@@ -20,11 +20,11 @@ code {
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
 
 div{
-  font-family: 'Montserrat SemiBold', sans-serif;
+  font-family: 'Montserrat SemiBold', sans-serif !important;
 }
 
 .skills,.section{
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto Mono', monospace !important;
 }
 
 :root {
