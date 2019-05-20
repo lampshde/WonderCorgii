@@ -98,7 +98,7 @@ class App extends React.Component {
                 <div className="section-header-num">N°02</div>
               </div>
               
-              <p>Thanks for stopping by</p>
+              <p>Thanks for stopping by my young website</p>
               <p>This where I will host my future projects,</p>
               
               <p><span>john.randall.dev@gmail.com</span></p>
