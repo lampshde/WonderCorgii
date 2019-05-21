@@ -107,7 +107,7 @@ class App extends React.Component {
               </div>
               
               <p>Thanks for stopping by my young website</p>
-              <p>This where I will host my future projects,</p>
+              <p>This is where I will host my future projects,</p>
               
               <p><span>john.randall.dev@gmail.com</span></p>
               <a className="contact-link" href="mailto:john.randall.dev@gmail.com">Lets Talk</a>
