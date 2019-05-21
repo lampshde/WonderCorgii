@@ -7,6 +7,29 @@ import ScrollTrigger from 'react-scroll-trigger';
 import 'aos/dist/aos.css';
 
 const navItems = ['ABOUT','SKILLS','CONTACT']
+const skills = [
+  {
+    header:"frontend",
+    image: "/assets/unicorn.png",
+    imageAlt: "frontend-unicorn",
+    skillList: ["Angular", "React", "JavaScript", "Figma"]
+  },
+  {
+    header:"backend",
+    image: "/assets/sharp-tongue.png",
+    imageAlt: "backend-monster",
+    skillList: ["Node.js", "Express", "GraphQL", "MongoDB"]
+  },
+  {
+    header:"devops",
+    image: "/assets/gift-box.png",
+    imageAlt: "devops-present",
+    skillList: ["Docker", "Jenkins", "Git", "Trello"]
+  }
+]
+
+
+
 class App extends React.Component {
   constructor(props){
     super(props);
@@ -30,7 +53,7 @@ class App extends React.Component {
         <div className="title">
           <div className="title-line">Hi,</div>
           <div className="title-line">I'm John,</div>
-          <div className="title-line">web developer. <img src="/assets/corgi.gif"/></div>
+          <div className="title-line">web developer. <img alt="WonderCorgi" src="/assets/corgi.gif"/></div>
           <div className="sub-title-line">Full Stack Developer / Javascript / Corgi Lover</div>
         </div>
         <section>
@@ -55,36 +78,21 @@ class App extends React.Component {
               <div className="section-header-num">N°02</div>
             </div>
             <div className="skills-wrapper">
-              <div className="skills-frontend">
-                <img src="/assets/unicorn.png"></img>
-                <div className="skills-header"><span>frontend</span></div>
-                <ul className="skills-list">
-                  <li>Angular</li>
-                  <li>React</li>
-                  <li>JavaScript</li>
-                  <li>Figma</li>
-                </ul>
-              </div>
-              <div className="skills-backend">
-                <img src="/assets/sharp-tongue.png"></img>
-                <div className="skills-header"><span>backend</span></div>
-                <ul className="skills-list">
-                  <li>Node.js</li>
-                  <li>Express</li>
-                  <li>GraphQL</li>
-                  <li>MongoDB</li>
-                </ul>
-              </div>
-              <div className="skills-devops">
-                <img src="/assets/gift-box.png"></img>
-                <div className="skills-header"><span>devops</span></div>
-                <ul className="skills-list">
-                  <li>Docker</li>
-                  <li>Jenkins</li>
-                  <li>Github</li>
-                  <li>Trello</li>
-                </ul>
-              </div>
+              
+              {skills.map( (skill, index) => (
+                <div key={index}>
+                  <img alt={skill.imageAlt} src={skill.image}></img>
+                  <div className="skills-header"><span>{skill.header}</span></div>
+                  <ul className="skills-list">
+                    
+                    {skill.skillList.map( (item, index) => (
+                      <li key={index}>{item}</li>
+                    ))}
+
+                  </ul>
+                </div>
+              ))}
+
             </div>
           </div>
           </ScrollTrigger>
@@ -95,7 +103,7 @@ class App extends React.Component {
               <div className="section-header">
                 <div className="section-header-title">Contact me</div>
                 <div className="section-header-line"></div>
-                <div className="section-header-num">N°02</div>
+                <div className="section-header-num">N°03</div>
               </div>
               
               <p>Thanks for stopping by my young website</p>
@@ -103,7 +111,7 @@ class App extends React.Component {
               
               <p><span>john.randall.dev@gmail.com</span></p>
               <a className="contact-link" href="mailto:john.randall.dev@gmail.com">Lets Talk</a>
-              <p>Made with 💙 by John Randall</p>
+              <p>Made with <span role="img"aria-label="blue-heart">💙</span> by John Randall</p>
             </div>
             </ScrollTrigger>
         </section>

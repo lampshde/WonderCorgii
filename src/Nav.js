@@ -18,10 +18,11 @@ class Nav extends React.Component{
                 <div className="nav-links-wrapper" style={this.state.selectedIndex >= 0 ? {transform: `translateY(${-39*this.state.selectedIndex}px)`} : {}}>
                     {this.props.navItems.map((value,index) => {
                         return <Link 
-                            to={ index != this.state.selectedIndex ? `section${index}` : ''}
+                            to={ index !== this.state.selectedIndex ? `section${index}` : ''}
                             duration= {500}
                             smooth={true}
                             offset= {-200}
+                            key={index}
                             >
                             <div className={"nav-item " + (this.state.selectedIndex === index ? 'selected' : '')} onClick={()=>(this.selectNavItem(index,false))}>
                                 <div className="nav-item-text">{value}</div>
