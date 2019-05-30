@@ -1,9 +1,8 @@
-.App {
+.Home {
   /* display: flex;
   justify-content: center; */
   color: var(--theme-text-color);
   min-height: 100vh;
-  background: var(--theme-bg-color);
   padding-bottom: 15rem;
 }
 

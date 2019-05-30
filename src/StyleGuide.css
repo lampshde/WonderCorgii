@@ -1,0 +1,7 @@
+.StyleGuide{
+    color: var(--theme-text-color);
+    min-height: 100vh;
+    padding: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
