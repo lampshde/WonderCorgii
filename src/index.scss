@@ -31,6 +31,13 @@ div{
 :root {
   --theme-primary-color: #4B92E3;
   --theme-secondary-color: #b83746;
+  --theme-bg-color: #ffffff;
+  --theme-text-color: #101117;
+}
+
+[data-theme="dark"] {
+  --theme-primary-color: #4B92E3;
+  --theme-secondary-color: #b83746;
   --theme-bg-color: #101117;
   --theme-text-color: #cfd0d6;
 }

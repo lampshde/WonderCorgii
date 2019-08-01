@@ -1,0 +1,12 @@
+.App {
+  /* display: flex;
+  justify-content: center; */
+  color: var(--theme-text-color);
+  min-height: 100vh;
+  background: var(--theme-bg-color);
+}
+
+.fixed-toggle-wrapper{
+  padding: 2rem 1rem;
+  position: absolute;
+}

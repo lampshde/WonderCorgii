@@ -1,0 +1,10 @@
+div{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    svg{
+        align-self: center;
+        fill: var(--theme-text-color);
+    }
+}
